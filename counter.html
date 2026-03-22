@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2NZY6KFHX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C2NZY6KFHX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عداد الكلمات ووقت القراءة | ProSmart AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta name="keywords" content="AI tools, Text Summarizer, Word Counter, Content Ideas Generator, Arabic Text Formatter, ProSmart AI">
+<meta name="description" content="ProSmart AI: Free AI-powered tools for summarization, content ideas, word counting, and text formatting.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8986146764049420"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="google_translate_element" style="padding: 10px; text-align: center; background: #0f172a;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ar', 
+            includedLanguages: 'en,fr,es,de,tr', // اللغات التي تريد إتاحتها (انجليزي، فرنسي، اسباني، الماني، تركي)
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <nav>
+        <div class="logo">ProSmart AI</div>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    </nav>
+
+    <div class="container">
+        <section class="tool-page fade-in">
+            <h2 style="color: var(--accent-color);"><i class="fas fa-calculator"></i> عداد الكلمات والوقت الذكي</h2>
+            <p>حلل نصك بدقة واعرف إحصائيات القراءة فوراً وبشكل تلقائي.</p>
+            
+            <textarea id="textInput" oninput="analyzeText()" placeholder="ابدأ الكتابة أو ألصق نصك هنا لتحليله..." rows="10"></textarea>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-font" style="color: var(--accent-color); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                    <span id="wordCount">0</span>
+                    <p>كلمة</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-keyboard" style="color: var(--accent-color); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                    <span id="charCount">0</span>
+                    <p>حرف</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-stopwatch" style="color: var(--accent-color); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                    <span id="readingTime">0</span>
+                    <p>دقيقة قراءة</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; background: #0f172a; height: 8px; border-radius: 10px; overflow: hidden; border: 1px solid #334155;">
+                <div id="textBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--accent-color), #818cf8); transition: 0.5s;"></div>
+            </div>
+        </section>
+
+        <section class="seo-content" style="margin-top: 60px;">
+            <h3><i class="fas fa-chart-line"></i> أهمية تحليل النصوص رقمياً</h3>
+            <p>تساعدك أداة <strong>عداد الكلمات</strong> من ProSmart AI في ضبط معايير كتابتك لتتوافق مع متطلبات محركات البحث والمنصات الأكاديمية. الدقة في حساب الحروف والكلمات تضمن لك جودة محتوى مثالية.</p>
+            
+            <h4 style="margin-top: 25px; color: var(--accent-color);">مميزات المحلل الذكي:</h4>
+            <ul style="padding-right: 20px; margin-top: 10px;">
+                <li><strong>تحديث فوري:</strong> النتائج تظهر لحظة كتابة كل حرف.</li>
+                <li><strong>تقدير الوقت:</strong> يعتمد حساب وقت القراءة على متوسط السرعة العالمية (200 كلمة/دقيقة).</li>
+                <li><strong>متوافق مع السيو:</strong> يساعدك في معرفة ما إذا كان مقالك طويلاً بما يكفي لتصدر نتائج جوجل.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ProSmart Tools - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        function analyzeText() {
+            const text = document.getElementById('textInput').value.trim();
+            const words = text ? text.split(/\s+/).length : 0;
+            const chars = text.length;
+            const time = Math.ceil(words / 200);
+            
+            // تحديث الأرقام
+            document.getElementById('wordCount').innerText = words;
+            document.getElementById('charCount').innerText = chars;
+            document.getElementById('readingTime').innerText = (words > 0) ? time : 0;
+
+            // تحريك شريط التقدم (كحركة جمالية)
+            const bar = document.getElementById('textBar');
+            let progress = (words / 500) * 100; // يفترض أن 500 كلمة هي مقال كامل
+            bar.style.width = Math.min(progress, 100) + "%";
+        }
+    </script>
+
+    <style>
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stat-item { transition: 0.3s; }
+        .stat-item:hover { transform: scale(1.05); border-color: var(--accent-color); }
+    </style>
+</body>
+</html>

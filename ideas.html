@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2NZY6KFHX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C2NZY6KFHX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد أفكار المحتوى بالذكاء الاصطناعي | ProSmart AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta name="keywords" content="AI tools, Text Summarizer, Word Counter, Content Ideas Generator, Arabic Text Formatter, ProSmart AI">
+<meta name="description" content="ProSmart AI: Free AI-powered tools for summarization, content ideas, word counting, and text formatting.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8986146764049420"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="google_translate_element" style="padding: 10px; text-align: center; background: #0f172a;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ar', 
+            includedLanguages: 'en,fr,es,de,tr', // اللغات التي تريد إتاحتها (انجليزي، فرنسي، اسباني، الماني، تركي)
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <nav>
+        <div class="logo">ProSmart AI</div>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">عن الموقع</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="tool-page fade-in">
+            <h2 style="color: #a855f7;"><i class="fas fa-lightbulb"></i> مولد أفكار المحتوى الذكي</h2>
+            <p>أدخل الكلمة المفتاحية لمجالك، واحصل على أفكار عناوين جذابة لفيديوهاتك ومقالاتك القادمة.</p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="keywordInput" placeholder="مثلاً: الطبخ، البرمجة، التسويق، الربح من الانترنت..." style="flex: 1; padding: 15px; border-radius: 12px; background: #0f172a; color: white; border: 1px solid #334155; font-size: 1.1rem;">
+                <button class="btn" onclick="generateIdeas()" style="background: #a855f7; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                    <span>ولد الأفكار</span> <i class="fas fa-brain"></i>
+                </button>
+            </div>
+
+            <div id="loader" style="display:none; width: 100%; background: #0f172a; height: 6px; border-radius: 10px; margin: 25px 0; overflow: hidden; border: 1px solid #334155;">
+                <div id="progress" style="width: 0%; height: 100%; background: #a855f7; box-shadow: 0 0 15px #a855f7; transition: width 0.3s;"></div>
+            </div>
+
+            <div id="resultBox" style="display:none; margin-top: 30px;">
+                <h3 style="color: #a855f7; margin-bottom: 20px;"><i class="fas fa-list-ul"></i> أفكار مقترحة لك:</h3>
+                <div id="ideasList" class="ideas-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="seo-content" style="margin-top: 60px;">
+            <h3><i class="fas fa-search"></i> كيفية الاستفادة من مولد أفكار المحتوى</h3>
+            <p>تساعدك أداة <strong>مولد أفكار المحتوى</strong> من ProSmart AI في التغلب على "قفشة الكاتب" (Writer's Block) عبر تقديم عناوين وقوالب جاهزة ومجربة لجذب انتباه الجمهور المستهدف.</p>
+            
+            <h4 style="margin-top: 25px; color: #a855f7;">لماذا تعتمد هذه الأداة على أنماط ناجحة؟</h4>
+            <ul style="padding-right: 20px; margin-top: 10px;">
+                <li><strong>عناوين فيروسية (Viral):</strong> القوالب المستخدمة تعتمد على سيكولوجية الفضول والبحث عن الحلول السريعة.</li>
+                <li><strong>متوافقة مع السيو (SEO):</strong> العناوين تتضمن الكلمات المفتاحية بشكل طبيعي مما يرفع ترتيبك في محركات البحث.</li>
+                <li><strong>مثالية لصناع المحتوى:</strong> تصلح لليوتيوبرز، المدونين، ومسؤولي السوشيال ميديا.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ProSmart Tools - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        function generateIdeas() {
+            const keyword = document.getElementById('keywordInput').value.trim();
+            const resultBox = document.getElementById('resultBox');
+            const ideasList = document.getElementById('ideasList');
+            const loader = document.getElementById('loader');
+            const progress = document.getElementById('progress');
+
+            if(keyword.length < 2) {
+                alert("يرجى إدخال كلمة مفتاحية صالحة (حرفين على الأقل).");
+                return;
+            }
+
+            // تصفير وبدء عملية التحميل
+            resultBox.style.display = 'none';
+            ideasList.innerHTML = '';
+            loader.style.display = 'block';
+            progress.style.width = '0%';
+            
+            // محاكاة تحميل ذكي (أسرع قليلاً هنا)
+            let width = 0;
+            let interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    showIdeas(keyword);
+                } else {
+                    width += 20;
+                    progress.style.width = width + '%';
+                }
+            }, 100);
+        }
+
+        function showIdeas(keyword) {
+            const loader = document.getElementById('loader');
+            const resultBox = document.getElementById('resultBox');
+            const ideasList = document.getElementById('ideasList');
+
+            loader.style.display = 'none';
+            resultBox.style.display = 'block';
+
+            // قوالب الأفكار الذكية
+            const templates = [
+                `5 أسرار لا يعرفها أحد عن ${keyword} ستغير حياتك`,
+                `كيف تبدأ في مجال ${keyword} من الصفر وتصبح محترفاً في 30 يوماً`,
+                `أهم 7 أدوات برمجية يحتاجها كل مهتم بـ ${keyword} في عام 2026`,
+                `تجربتي الحقيقية مع ${keyword}: الأخطاء التي كلفتني الكثير (وكيف تتجنبها)`,
+                `مقارنة شاملة: أفضل 3 طرق لتعلم ${keyword} مجاناً وبسرعة`,
+                `أهم النصائح الذهبية للمبتدئين في مجال ${keyword}`,
+                `لماذا يعتبر ${keyword} هو مهارة المستقبل الأكثر طلباً في سوق العمل؟`,
+                `شرح مبسط لمفهوم ${keyword} للأطفال والمبتدئين (دليل خطوة بخطوة)`,
+                `الربح من ${keyword}: استراتيجيات مجربة لتحقيق دخلك الأول هذا الشهر`,
+                `تاريخ ${keyword} وكيف تطور ليصل إلى ما هو عليه الآن`
+            ];
+
+            // عرض الأفكار
+            templates.forEach(idea => {
+                const ideaCard = document.createElement('div');
+                ideaCard.className = 'idea-item';
+                ideaCard.innerHTML = `
+                    <p>${idea}</p>
+                    <button class="copy-idea-btn" onclick="copyIdea('${idea}', this)">نسخ العنوان <i class="fas fa-copy"></i></button>
+                `;
+                ideasList.appendChild(ideaCard);
+            });
+        }
+
+        function copyIdea(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> تم النسخ!';
+                btn.style.color = '#22c55e';
+                setTimeout(() => { 
+                    btn.innerHTML = 'نسخ العنوان <i class="fas fa-copy"></i>';
+                    btn.style.color = '#94a3b8';
+                }, 2000);
+            });
+        }
+    </script>
+
+    <style>
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* تنسيق شبكة الأفكار */
+        .ideas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .idea-item {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .idea-item:hover {
+            border-color: #a855f7;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.1);
+        }
+        .idea-item p {
+            font-size: 1rem;
+            color: #f8fafc;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .copy-idea-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.85rem;
+            align-self: flex-start;
+            padding: 0;
+            transition: 0.3s;
+        }
+        .copy-idea-btn:hover {
+            color: #a855f7;
+        }
+    </style>
+</body>
+</html>

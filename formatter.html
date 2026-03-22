@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2NZY6KFHX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C2NZY6KFHX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منسق ومصحح النصوص | ProSmart AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8986146764049420"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="google_translate_element" style="padding: 10px; text-align: center; background: #0f172a;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ar', 
+            includedLanguages: 'en,fr,es,de,tr', // اللغات التي تريد إتاحتها (انجليزي، فرنسي، اسباني، الماني، تركي)
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <nav>
+        <div class="logo">ProSmart AI</div>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    </nav>
+
+    <div class="container">
+        <section class="tool-page fade-in">
+            <h2 style="color: #22c55e;"><i class="fas fa-magic"></i> منسق النصوص الاحترافي</h2>
+            <p>قم بتنظيف نصك من المسافات الزائدة وتنظيمه ليصبح جاهزاً للنشر فوراً.</p>
+            
+            <textarea id="formatInput" placeholder="أدخل النص الذي تريد تنظيفه وتنسيقه هنا..." rows="10"></textarea>
+            
+            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); margin-bottom: 20px;">
+                <button class="btn" onclick="cleanText()" style="background: #22c55e; color: white;">تنظيف المسافات <i class="fas fa-broom"></i></button>
+                <button class="btn" onclick="addBulletPoints()" style="background: #10b981; color: white;">إضافة نقاط <i class="fas fa-list"></i></button>
+                <button class="btn" onclick="removeEmptyLines()" style="background: #059669; color: white;">إزالة الأسطر الفارغة <i class="fas fa-align-justify"></i></button>
+            </div>
+
+            <div id="resultBox" style="display:none; margin-top: 20px; background: #0f172a; padding: 20px; border-radius: 15px; border: 1px dashed #22c55e;">
+                <h3 style="color: #22c55e;">النص المنسق:</h3>
+                <p id="formatOutput" style="white-space: pre-line; line-height: 1.8;"></p>
+                <button class="btn" onclick="copyResult()" id="copyBtn" style="background: #475569; margin-top: 15px;">نسخ النص المنسق <i class="fas fa-copy"></i></button>
+            </div>
+        </section>
+
+        <section class="seo-content" style="margin-top: 60px;">
+            <h3><i class="fas fa-check-double"></i> لماذا تحتاج لتنسيق نصوصك؟</h3>
+            <p>أداة <strong>منسق النصوص</strong> تساعدك في جعل مقالاتك تبدو أكثر احترافية وجاذبية للقارئ عبر إزالة العيوب البصرية والتنظيمية في الكتابة.</p>
+        </section>
+    </div>
+
+    <script>
+        function cleanText() {
+            let text = document.getElementById('formatInput').value;
+            // إزالة المسافات الزائدة بين الكلمات
+            let cleaned = text.replace(/\s+/g, ' ').trim();
+            showFormatted(cleaned);
+        }
+
+        function addBulletPoints() {
+            let text = document.getElementById('formatInput').value;
+            let lines = text.split('\n').filter(line => line.trim() !== '');
+            let bulleted = lines.map(line => '• ' + line).join('\n');
+            showFormatted(bulleted);
+        }
+
+        function removeEmptyLines() {
+            let text = document.getElementById('formatInput').value;
+            let cleaned = text.split('\n').filter(line => line.trim() !== '').join('\n');
+            showFormatted(cleaned);
+        }
+
+        function showFormatted(text) {
+            document.getElementById('resultBox').style.display = 'block';
+            document.getElementById('formatOutput').innerText = text;
+        }
+
+        function copyResult() {
+            const text = document.getElementById('formatOutput').innerText;
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = 'تم النسخ بنجاح! ✅';
+                setTimeout(() => btn.innerHTML = 'نسخ النص المنسق <i class="fas fa-copy"></i>', 2000);
+            });
+        }
+    </script>
+</body>
+</html>

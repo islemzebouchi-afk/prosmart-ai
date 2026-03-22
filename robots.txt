@@ -1,0 +1,6 @@
+# يسمح لجميع محركات البحث بالدخول للموقع
+User-agent: *
+Allow: /
+
+# رابط خريطة الموقع (Sitemap) ليجدها جوجل بسهولة
+Sitemap: https://prosmart-ai-tools.netlify.app/sitemap.xml
